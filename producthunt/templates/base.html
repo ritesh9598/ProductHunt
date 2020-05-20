@@ -8,7 +8,7 @@
   <meta name="author" content="">
 
 
-  <title>Ritesh</title>
+  <title>ProductHunt</title>
 
   <!-- Bootstrap core CSS -->
 
@@ -30,6 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           {% if user.is_authenticated%}
+          <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3 btn btn-dark" href="{%url 'create'%}">Create</a>&nbsp
             <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3 btn btn-dark"
             href="javascript:{document.getElementById('logout').submit()}">Logout</a>&nbsp
             <form id="logout" action="{%url 'logout'%}" method="post">
