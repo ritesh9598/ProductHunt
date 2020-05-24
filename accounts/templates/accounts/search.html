@@ -1,0 +1,64 @@
+
+
+{%extends 'base.html'%}
+
+{%block content%}
+
+
+{%if error %}
+<h3 class="font-italic text-justify  p-3 mb-2 bg-danger text-red">{{error}}</h3>
+<br />
+<br />
+{%endif%}
+
+
+<header>
+<div class="container">
+  <div>
+      <p class='center f3'>
+        {'Submit Image url and detect faces in your pictures. Make a try.'}
+      </p>
+   <div class='center'>
+  <form class=" form center pa4 br3 shadow-5" action="{% url 'search' %}" method="post">
+    {%csrf_token%}
+
+<h1></h1>
+<div className='center'>
+        <div className='form center pa4 br3 shadow-5'>
+          <input className='f4 pa2 w-70 center' type='textarea' name="imgurl"/>
+          <button
+            className='w-30 grow f4 link ph3 pv2 dib white bg-light-red center' onClick="hello()"
+          >Detect</button>
+        </div>
+      </div>
+</form>
+</div>
+</div>
+
+
+</div>
+<br>
+
+<b><h3 class="center">Your picture has {{FaceNumber}} face</h3></b>
+
+<div class='center ma'>
+    <div class='absolute mt2'>
+      <img id='inputimage' alt='' src='{{add}}'
+       width='auto' height='auto'/>
+       {% for i in d %}
+      <div class='bounding-box'  style= "top: {{i.top}}px; right: {{i.right}}px; bottom:{{i.bottom}}px; left:{{i.left}}px">
+
+    </div>
+    {% endfor%}
+    </div>
+  </div>
+  </header>
+
+
+
+
+
+
+
+
+{%endblock%}

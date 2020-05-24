@@ -41,7 +41,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
 }
 body {
-	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+
+	  background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
 	color: #000;
 	font: 14px Arial;
 	margin: 0 auto;
@@ -308,8 +309,18 @@ form:after {
 </head>
 
 <body>
+	<div class=" container shadow-lg  mb-12 p-3 bg-danger rounded " style="text-align:center">
+
+  <h1 class="font-italic text-justify center p-3 mb-2  text-purple">Welcome to the FaceHunt!!</h1>
+  <h4 class="text-white">Here You can detect face in Your picture!!!.</h4>
+
+</div>
+
 
 <div class="container">
+	<h2 class="center">Please Login to detect face in your picture!!</h2>
+	<br>
+	<br>
 <section id="content">
 <form class="" action="{% url 'login' %}" method="post">
 
