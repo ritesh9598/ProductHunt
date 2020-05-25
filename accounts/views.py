@@ -81,4 +81,4 @@ def search(request):
         }
         return render(request,'accounts/search.html',box)
     else:
-        return render(request,'accounts/search.html',{'error':'Invalid Url'})
+        return render(request,'accounts/search.html')
